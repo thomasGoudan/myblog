@@ -19,6 +19,35 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.5.RELEASE'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    //热部署
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.2.5.RELEASE'
+    //spring security + thymeleaf + springsecurity版本依赖
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.2.0'
+    compile('org.springframework.boot:spring-boot-starter-parent:2.2.1.RELEASE')
+    compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity5') 
+    compile('org.thymeleaf:thymeleaf-spring5')
+    // https://mvnrepository.com/artifact/es.nitaur.markdown/txtmark
+    compile group: 'es.nitaur.markdown', name: 'txtmark', version: '0.16'
+
+    // 添加  Spring Data Elasticsearch 的依赖
+    compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
+
+    // 添加  JNA 的依赖
+    compile('net.java.dev.jna:jna:4.3.0')
+    // 该依赖对于编译测试是必须的，默认包含编译产品依赖和编译时依
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+
+
+
 }
 
 test {

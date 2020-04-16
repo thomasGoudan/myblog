@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+</head>
+<body>
+<div class="row">
+    <!--左侧-->
+    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <h5><span class="glyphicon glyphicon-list" aria-hidden="true"></span>菜单</h5>
+        <ul class="list-group blog-menu" th:each="menu : ${model.list}">
+            <a href="javascript:void(0)" class="list-group-item " th:title="${menu.name}"
+               th:text="${menu.name}" data-th-attr="url=${menu.url}">
+            </a>
+        </ul>
+    </div>
+    <!--右侧-->
+    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" id="rightContainer">
+    </div>
+</div>
+<div th:replace="~{fragments/footer :: footer}"></div>
+<script src="../../js/admin/main.js"></script>
+
+</body>
+</html>
